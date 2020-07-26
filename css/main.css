@@ -7,10 +7,10 @@
 .borderDashed, .checkOut .checkOut__content .total, .checkOut .checkOut__content .infoFilm, .checkOut .checkOut__content .chair, .checkOut .checkOut__content .userName {
   border-bottom: 1px dashed #e9e9e9; }
 
-.border-radius, .buyTicket .buyTicket__content .item__dropdown .dropdown-menu--edit, .buyTicket .buyTicket__content .item__button .btn, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .typePoint .point, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .typePoint span:last-child, .news .news__content .tab-content .introduce .introduce__item a img,
+.border-radius, .introduceMovie .introduceMovie__content .detailMovie .imgMovie img, .informationMovie .informationMovie__content .tab-content #showTimes, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg img, .buyTicket .buyTicket__content .item__dropdown .dropdown-menu--edit, .buyTicket .buyTicket__content .item__button .btn, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .typePoint .point, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .typePoint span:last-child, .news .news__content .tab-content .introduce .introduce__item a img,
 .news .news__content .tab-content .introduce .review__item a img,
 .news .news__content .tab-content .review .introduce__item a img,
-.news .news__content .tab-content .review .review__item a img, .news .news__content .tab-content .review .review__itemEnd .endItem .imgReview img, .appMobile .appMobile__content .appMobile-left .btnAppMobile, .introduceMovie .introduceMovie__content .detailMovie .imgMovie img, .informationMovie .informationMovie__content .tab-content #showTimes, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg img, .seatCheckOut .bookingRight .bookingRight__content .bottom .listChair .listItem .chairRow .seat {
+.news .news__content .tab-content .review .review__item a img, .news .news__content .tab-content .review .review__itemEnd .endItem .imgReview img, .appMobile .appMobile__content .appMobile-left .btnAppMobile, .seatCheckOut .bookingRight .bookingRight__content .bottom .listChair .listItem .chairRow .seat {
   border-radius: 4px; }
 
 .clear {
@@ -336,6 +336,613 @@ body {
   font-weight: normal;
   text-align: center;
   padding: 0 5px; }
+
+.introduceMovie .introduceMovie__content {
+  position: relative;
+  overflow: hidden; }
+  .introduceMovie .introduceMovie__content .backgroundImg img {
+    width: 100%;
+    height: auto;
+    filter: blur(15px); }
+  .introduceMovie .introduceMovie__content .backgroundLinear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0a2029, transparent 100%); }
+  .introduceMovie .introduceMovie__content .detailMovie {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .introduceMovie .introduceMovie__content .detailMovie .imgMovie {
+      position: relative;
+      padding: 0;
+      transition: all .2s; }
+      .introduceMovie .introduceMovie__content .detailMovie .imgMovie img {
+        width: 100%;
+        height: 100%; }
+      .introduceMovie .introduceMovie__content .detailMovie .imgMovie:hover .moviePlay {
+        opacity: 1; }
+      .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, -50%);
+        opacity: 0; }
+        .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay img {
+          width: 80px;
+          height: 80px; }
+    .introduceMovie .introduceMovie__content .detailMovie .inforMovie {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .introduceMovie .introduceMovie__content .detailMovie .inforMovie p {
+        margin: 0;
+        color: #e9e9e9;
+        font-size: 14px;
+        font-weight: normal; }
+      .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) {
+        width: 80%; }
+        .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:first-child {
+          font-size: 16px;
+          margin-top: 6px;
+          margin-right: 6px;
+          float: left; }
+        .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:last-child {
+          font-size: 24px; }
+    .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie {
+      position: absolute;
+      top: 50%;
+      right: -8%;
+      transform: translateY(-50%);
+      text-align: center; }
+      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg {
+        position: relative;
+        left: 5%;
+        z-index: 100; }
+        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg circle {
+          width: 100%;
+          height: 100%;
+          fill: none;
+          stroke: #3a3a3a;
+          stroke-width: 9;
+          stroke-linecap: round;
+          transform: translate(5px, 5px); }
+        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg circle:nth-child(2) {
+          stroke-dasharray: 170;
+          stroke-dashoffset: 170; }
+      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated:first-child circle:nth-child(1) {
+        stroke: #7ED321; }
+      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated .number {
+        position: absolute;
+        top: 35%;
+        left: 45%;
+        transform: translate(-50%, -50%); }
+        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated .number span {
+          color: #fff;
+          font-size: 60px;
+          font-weight: normal; }
+      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated .star {
+        flex-direction: row;
+        margin: 10px 0; }
+        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated .star img {
+          max-width: 25px;
+          width: 100%; }
+      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated span {
+        flex-direction: row;
+        color: #e9e9e9;
+        font-size: 14px;
+        font-weight: normal; }
+  .introduceMovie .introduceMovie__content .detailWidth {
+    max-width: 870px;
+    margin: auto; }
+
+@media screen and (max-width: 736px) {
+  .introduceMovie .introduceMovie__content .backgroundImg img {
+    filter: blur(0); }
+  .introduceMovie .introduceMovie__content .detailMovie .imgMovie img {
+    display: none; }
+  .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay {
+    opacity: 1; }
+    .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay img {
+      opacity: 1; }
+  .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) {
+    width: 100%;
+    margin: 0;
+    font-size: 20px; }
+    .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:first-child {
+      display: none; }
+  .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie {
+    display: none; } }
+.informationMovie {
+  background-color: #0a2029; }
+  .informationMovie .informationMovie__content {
+    transform: translate(0, -70px);
+    padding: 0 15px; }
+    .informationMovie .informationMovie__content .nav .nav-item .nav-link {
+      color: #fff;
+      font-size: 18px;
+      font-weight: normal;
+      transition: all 0.2s; }
+      .informationMovie .informationMovie__content .nav .nav-item .nav-link.active {
+        color: #fb4226;
+        font-size: 20px;
+        font-weight: normal; }
+      .informationMovie .informationMovie__content .nav .nav-item .nav-link:hover {
+        font-size: 20px; }
+    .informationMovie .informationMovie__content .tab-content {
+      margin-top: 40px;
+      width: 100%; }
+      .informationMovie .informationMovie__content .tab-content #showTimes {
+        background-color: #fff; }
+        .informationMovie .informationMovie__content .tab-content #showTimes .row {
+          margin: 0; }
+          .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater {
+            padding: 0; }
+            .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link {
+              background-color: #fff;
+              width: 100%;
+              opacity: 0.7;
+              padding: 20px;
+              border-radius: 0;
+              border-bottom: 1px solid #fafafa; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater {
+                margin: 0;
+                padding: 0; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .imgTheater {
+                  padding: 0; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .imgTheater img {
+                    padding: 0;
+                    width: 50px;
+                    margin-right: 10px; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater {
+                  padding: 0; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p {
+                    margin: 0; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:first-child {
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 500; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:last-child img {
+                    width: 13px;
+                    margin: 0; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:last-child span {
+                    color: #fb4226;
+                    font-size: 13px;
+                    font-weight: 400; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desCustomer {
+                  display: flex;
+                  align-items: center; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link.active {
+                background-color: #fff;
+                opacity: 1; }
+          .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST {
+            padding: 0; }
+            .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content {
+              width: 100%;
+              height: 621px;
+              max-height: 621px;
+              overflow-x: hidden;
+              overflow-y: auto;
+              margin: 0;
+              padding: 20px 20px 10px 20px; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar {
+                width: 5px; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-thumb {
+                background: #fb4226;
+                border-radius: 10px; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-thumb:hover {
+                background: #b30000; }
+              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo {
+                border-bottom: 1px solid #e8e8e8;
+                margin-top: 10px; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .imgTheater {
+                  padding: 0;
+                  width: 50px;
+                  height: 45px; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent {
+                  padding: 0;
+                  padding-left: 10px; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child {
+                    margin: 0; }
+                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child span:first-child {
+                      color: #fb4226;
+                      font-size: 16px;
+                      font-weight: 500; }
+                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child span:last-child {
+                      color: #000;
+                      font-size: 16px;
+                      font-weight: 500; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:last-child {
+                    line-height: 1.7;
+                    letter-spacing: 0.1px;
+                    color: #9b9b9b;
+                    font-size: 13px;
+                    font-weight: 400; }
+                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:last-child span {
+                      color: #fb4226;
+                      font-size: 13px;
+                      font-weight: 400; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .movieFormat p {
+                  margin-bottom: 5px;
+                  color: #000;
+                  font-size: 16px;
+                  font-weight: 500; }
+                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem {
+                  padding: 2px;
+                  margin: 0 2px 5px 0;
+                  text-decoration: none;
+                  border-radius: 7px;
+                  border: 1px solid #e4e4e4;
+                  background-color: rgba(246, 246, 246, 0.5);
+                  color: #9b9b9b;
+                  font-size: 14px;
+                  font-weight: 400;
+                  transition: all 0.2s;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem span:first-child {
+                    padding-right: 7px;
+                    letter-spacing: -2px;
+                    color: #108f3e;
+                    font-size: 18px;
+                    font-weight: 500; }
+                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem span:last-child {
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    font-weight: 500; }
+      .informationMovie .informationMovie__content .tab-content #info .inforTop {
+        width: 100%;
+        margin: 0; }
+        .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left {
+          padding: 0 7px; }
+          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left .left__item {
+            margin: 0 0 10px; }
+            .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left .left__item p {
+              margin-bottom: 10px;
+              padding: 0;
+              color: #e9e9e9;
+              font-size: 14px;
+              font-weight: normal; }
+        .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right {
+          padding: 0 7px 0 10px; }
+          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item p {
+            margin-bottom: 10px;
+            color: #e9e9e9;
+            font-size: 14px;
+            font-weight: normal; }
+          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemTitle {
+            margin-bottom: 10px; }
+          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemContent {
+            margin-bottom: 10px; }
+            .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemContent p {
+              text-align: justify; }
+      .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomTitle {
+        margin-bottom: 10px; }
+        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomTitle p {
+          margin: 50px 0 20px;
+          padding: 0 7px;
+          color: #e9e9e9;
+          font-size: 14px;
+          font-weight: normal; }
+      .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent {
+        width: 33%;
+        padding-bottom: 20px; }
+        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a {
+          transition: all 0.2s; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg {
+            width: 100%;
+            background-color: #e8e8e8;
+            margin-bottom: 20px; }
+            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg img {
+              max-width: 737px;
+              width: 100%;
+              height: 129px;
+              object-fit: cover; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomReview p {
+            margin-bottom: 7px;
+            line-height: 26px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a:hover {
+            text-decoration: none; }
+            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a:hover .bottomTitle p {
+              color: #fb4226;
+              font-size: 16px;
+              font-weight: normal; }
+        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon {
+          display: flex;
+          align-content: center;
+          padding-top: 10px; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like {
+            margin-right: 25px; }
+            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like img {
+              margin: 2px 10px 0 0;
+              width: 16px;
+              height: auto; }
+            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like span {
+              color: #fff; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .comment a img {
+            margin: 2px 10px 0 0;
+            width: 16px;
+            height: auto; }
+          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .comment a span {
+            color: #fff; }
+      .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem {
+        border: 1px solid #e6e6e6;
+        border-radius: 3px;
+        background-color: #fff;
+        max-width: 580px;
+        margin: 15px auto 0;
+        padding: 20px 20px 12px; }
+        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer {
+          display: flex; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer {
+            display: flex;
+            text-align: left;
+            padding: 0; }
+            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer img {
+              width: 32px;
+              height: 32px;
+              border-radius: 25px; }
+            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span {
+              margin-left: 10px; }
+              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:first-child {
+                margin: 0;
+                color: #000;
+                font-size: 14px;
+                font-weight: normal; }
+                .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:first-child img {
+                  width: 18px;
+                  height: 18px; }
+              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:last-child {
+                margin-bottom: 10px;
+                color: #9b9b9b;
+                font-size: 10px;
+                font-weight: normal; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0; }
+            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate {
+              text-align: center; }
+              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p {
+                margin: 0; }
+              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:first-child {
+                color: #91d25a;
+                font-size: 16px;
+                font-weight: normal; }
+              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:last-child {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px; }
+                .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:last-child img {
+                  max-width: 8px;
+                  width: 100%;
+                  height: auto; }
+        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent {
+          padding: 20px 0; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent p {
+            margin: 0;
+            color: #4a4a4a;
+            font-size: 14px;
+            font-weight: normal; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent p:last-child {
+            color: #fb4226;
+            cursor: pointer; }
+        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes {
+          border-top: 1px solid #e6e6e6;
+          padding-top: 10px; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes img {
+            width: 16px;
+            height: auto;
+            margin-right: 10px;
+            transition: all 0.2s; }
+            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes img:hover {
+              width: 18px; }
+          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes span {
+            color: #737576;
+            font-size: 14px;
+            font-weight: normal; }
+            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes span strong {
+              font-weight: 700; }
+      .informationMovie .informationMovie__content .tab-content #evaluate .btn--white {
+        margin-top: 35px;
+        margin-bottom: 20px; }
+  .informationMovie .detailWidth {
+    max-width: 870px;
+    margin: auto; }
+
+@media screen and (max-width: 736px) {
+  .informationMovie .informationMovie__content {
+    transform: translate(0, 0);
+    padding: 0; }
+    .informationMovie .informationMovie__content .nav {
+      padding-top: 20px; }
+    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent {
+      width: 100% !important;
+      padding: 0 7px; }
+      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomImg img {
+        max-width: none;
+        height: 100% !important; }
+      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomReview {
+        margin-bottom: 8px;
+        padding: 3px 0 0 12px; }
+      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .like,
+      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .comment {
+        display: none; } }
+@media screen and (max-width: 768px) {
+  .informationMovie .informationMovie__content .nav {
+    padding-top: 20px; }
+  .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent {
+    width: 100% !important;
+    padding: 0 7px; }
+    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomImg img {
+      max-width: none; }
+    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomReview {
+      margin-bottom: 8px;
+      padding: 3px 0 0 12px; }
+    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .like,
+    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .comment {
+      display: none; } }
+.formLogin {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 750px;
+  background-image: url(../img/bgBodyLogin.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .formLogin .formLogin__content {
+    position: absolute;
+    width: 1123px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding-top: 135px;
+    background-image: url(../img/bgLogin.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    overflow: hidden; }
+    .formLogin .formLogin__content .signUp {
+      float: right;
+      width: 562px;
+      background: rgba(177, 135, 77, 0.75); }
+      .formLogin .formLogin__content .signUp .signUp_form {
+        padding: 60px 85px 80px 55px; }
+        .formLogin .formLogin__content .signUp .signUp_form h2 {
+          margin: 0;
+          padding: 0;
+          margin-bottom: 20px;
+          color: #fff;
+          font-size: 30px;
+          font-weight: 600; }
+        .formLogin .formLogin__content .signUp .signUp_form .form-group {
+          margin-bottom: 30px; }
+          .formLogin .formLogin__content .signUp .signUp_form .form-group input {
+            height: 30px;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ebebec;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600; }
+            .formLogin .formLogin__content .signUp .signUp_form .form-group input::placeholder {
+              color: #fff;
+              font-size: 16px;
+              font-weight: 400; }
+            .formLogin .formLogin__content .signUp .signUp_form .form-group input:focus {
+              outline: none; }
+          .formLogin .formLogin__content .signUp .signUp_form .form-group .btnRegister {
+            margin-left: 5px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400; }
+            .formLogin .formLogin__content .signUp .signUp_form .form-group .btnRegister:hover {
+              text-decoration: none; }
+        .formLogin .formLogin__content .signUp .signUp_form .btnSinUp {
+          margin-top: 40px; }
+          .formLogin .formLogin__content .signUp .signUp_form .btnSinUp .btnSubmit {
+            width: 130px;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            text-transform: uppercase;
+            color: #b18757;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer; }
+
+.formRegister {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%); }
+  .formRegister .formRegister__content {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 180px 0 100px 0; }
+    .formRegister .formRegister__content .content_form {
+      box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); }
+      .formRegister .formRegister__content .content_form .formRegister_left {
+        padding: 0; }
+        .formRegister .formRegister__content .content_form .formRegister_left img {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          width: 100%;
+          height: 100%; }
+      .formRegister .formRegister__content .content_form .formRegister_right {
+        background-color: #000;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 0; }
+        .formRegister .formRegister__content .content_form .formRegister_right .right__content {
+          padding: 57px 65px;
+          padding-bottom: 65px; }
+          .formRegister .formRegister__content .content_form .formRegister_right .right__content .title {
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 35px; }
+          .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group {
+            margin-bottom: 33px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group input {
+              width: 100%;
+              padding: 5px 0;
+              background: transparent;
+              border: none;
+              color: #ebebec;
+              font-size: 16px;
+              font-weight: normal; }
+              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group input:focus {
+                outline: none;
+                border: none; }
+            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control {
+              border: none;
+              background-color: transparent;
+              color: rgba(235, 235, 236, 0.5);
+              font-size: 16px;
+              font-weight: normal; }
+              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control:focus {
+                box-shadow: none; }
+              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control option {
+                background-color: #ebebec;
+                color: #000;
+                font-size: 16px;
+                font-weight: normal; }
+          .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister {
+            text-align: center;
+            padding-top: 10px; }
+            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister .btnSubmit {
+              background-color: #108f3e;
+              border-radius: 20px;
+              border: none;
+              padding: 5px 33px;
+              color: #fff;
+              font-size: 18px;
+              font-weight: 400;
+              transition: all .4s;
+              cursor: pointer; }
+              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister .btnSubmit:focus {
+                border: none;
+                outline: none; }
 
 .carouselTix {
   position: relative;
@@ -1043,467 +1650,6 @@ body {
           height: auto; }
           .appMobile .appMobile__content .appMobile-right .carousel .carousel-inner .carousel-item img {
             width: 390px; } }
-.introduceMovie .introduceMovie__content {
-  position: relative;
-  overflow: hidden; }
-  .introduceMovie .introduceMovie__content .backgroundImg img {
-    width: 100%;
-    height: auto;
-    filter: blur(15px); }
-  .introduceMovie .introduceMovie__content .backgroundLinear {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #0a2029, transparent 100%); }
-  .introduceMovie .introduceMovie__content .detailMovie {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .introduceMovie .introduceMovie__content .detailMovie .imgMovie {
-      position: relative;
-      padding: 0;
-      transition: all .2s; }
-      .introduceMovie .introduceMovie__content .detailMovie .imgMovie img {
-        width: 100%;
-        height: 100%; }
-      .introduceMovie .introduceMovie__content .detailMovie .imgMovie:hover .moviePlay {
-        opacity: 1; }
-      .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-15%, -50%);
-        opacity: 0; }
-        .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay img {
-          width: 80px;
-          height: 80px; }
-    .introduceMovie .introduceMovie__content .detailMovie .inforMovie {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-      .introduceMovie .introduceMovie__content .detailMovie .inforMovie p {
-        margin: 0;
-        color: #e9e9e9;
-        font-size: 14px;
-        font-weight: normal; }
-      .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) {
-        width: 80%; }
-        .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:first-child {
-          font-size: 16px;
-          margin-top: 6px;
-          margin-right: 6px;
-          float: left; }
-        .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:last-child {
-          font-size: 24px; }
-    .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie {
-      position: absolute;
-      top: 50%;
-      right: -8%;
-      transform: translateY(-50%);
-      text-align: center; }
-      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg {
-        position: relative;
-        left: 5%;
-        z-index: 100; }
-        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg circle {
-          width: 100%;
-          height: 100%;
-          fill: none;
-          stroke: #3a3a3a;
-          stroke-width: 9;
-          stroke-linecap: round;
-          transform: translate(5px, 5px); }
-        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated svg circle:nth-child(2) {
-          stroke-dasharray: 170;
-          stroke-dashoffset: 170; }
-      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated:first-child circle:nth-child(1) {
-        stroke: #7ED321; }
-      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated .number {
-        position: absolute;
-        top: 35%;
-        left: 45%;
-        transform: translate(-50%, -50%); }
-        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .percentRated .number span {
-          color: #fff;
-          font-size: 60px;
-          font-weight: normal; }
-      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated .star {
-        flex-direction: row;
-        margin: 10px 0; }
-        .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated .star img {
-          max-width: 25px;
-          width: 100%; }
-      .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie .starRated span {
-        flex-direction: row;
-        color: #e9e9e9;
-        font-size: 14px;
-        font-weight: normal; }
-  .introduceMovie .introduceMovie__content .detailWidth {
-    max-width: 870px;
-    margin: auto; }
-
-@media screen and (max-width: 736px) {
-  .introduceMovie .introduceMovie__content .backgroundImg img {
-    filter: blur(0); }
-  .introduceMovie .introduceMovie__content .detailMovie .imgMovie img {
-    display: none; }
-  .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay {
-    opacity: 1; }
-    .introduceMovie .introduceMovie__content .detailMovie .imgMovie .moviePlay img {
-      opacity: 1; }
-  .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) {
-    width: 100%;
-    margin: 0;
-    font-size: 20px; }
-    .introduceMovie .introduceMovie__content .detailMovie .inforMovie p:nth-child(2) span:first-child {
-      display: none; }
-  .introduceMovie .introduceMovie__content .detailMovie .evaluateMovie {
-    display: none; } }
-.informationMovie {
-  background-color: #0a2029; }
-  .informationMovie .informationMovie__content {
-    transform: translate(0, -70px);
-    padding: 0 15px; }
-    .informationMovie .informationMovie__content .nav .nav-item .nav-link {
-      color: #fff;
-      font-size: 18px;
-      font-weight: normal;
-      transition: all 0.2s; }
-      .informationMovie .informationMovie__content .nav .nav-item .nav-link.active {
-        color: #fb4226;
-        font-size: 20px;
-        font-weight: normal; }
-      .informationMovie .informationMovie__content .nav .nav-item .nav-link:hover {
-        font-size: 20px; }
-    .informationMovie .informationMovie__content .tab-content {
-      margin-top: 40px;
-      width: 100%; }
-      .informationMovie .informationMovie__content .tab-content #showTimes {
-        background-color: #fff; }
-        .informationMovie .informationMovie__content .tab-content #showTimes .row {
-          margin: 0; }
-          .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater {
-            padding: 0; }
-            .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link {
-              background-color: #fff;
-              width: 100%;
-              opacity: 0.7;
-              padding: 20px;
-              border-radius: 0;
-              border-bottom: 1px solid #fafafa; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater {
-                margin: 0;
-                padding: 0; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .imgTheater {
-                  padding: 0; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .imgTheater img {
-                    padding: 0;
-                    width: 50px;
-                    margin-right: 10px; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater {
-                  padding: 0; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p {
-                    margin: 0; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:first-child {
-                    color: #000;
-                    font-size: 16px;
-                    font-weight: 500; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:last-child img {
-                    width: 13px;
-                    margin: 0; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desTheater p:last-child span {
-                    color: #fb4226;
-                    font-size: 13px;
-                    font-weight: 400; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link .infoTheater .desCustomer {
-                  display: flex;
-                  align-items: center; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .listTheater .nav-link.active {
-                background-color: #fff;
-                opacity: 1; }
-          .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST {
-            padding: 0; }
-            .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content {
-              width: 100%;
-              height: 621px;
-              max-height: 621px;
-              overflow-x: hidden;
-              overflow-y: auto;
-              margin: 0;
-              padding: 20px 20px 10px 20px; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar {
-                width: 5px; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-track {
-                box-shadow: inset 0 0 5px grey;
-                border-radius: 10px; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-thumb {
-                background: #fb4226;
-                border-radius: 10px; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content::-webkit-scrollbar-thumb:hover {
-                background: #b30000; }
-              .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo {
-                border-bottom: 1px solid #e8e8e8;
-                margin-top: 10px; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .imgTheater {
-                  padding: 0;
-                  width: 50px;
-                  height: 45px; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent {
-                  padding: 0;
-                  padding-left: 10px; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child {
-                    margin: 0; }
-                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child span:first-child {
-                      color: #fb4226;
-                      font-size: 16px;
-                      font-weight: 500; }
-                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:first-child span:last-child {
-                      color: #000;
-                      font-size: 16px;
-                      font-weight: 500; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:last-child {
-                    line-height: 1.7;
-                    letter-spacing: 0.1px;
-                    color: #9b9b9b;
-                    font-size: 13px;
-                    font-weight: 400; }
-                    .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .theaterInfo .infoContent p:last-child span {
-                      color: #fb4226;
-                      font-size: 13px;
-                      font-weight: 400; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .movieFormat p {
-                  margin-bottom: 5px;
-                  color: #000;
-                  font-size: 16px;
-                  font-weight: 500; }
-                .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem {
-                  padding: 2px;
-                  margin: 0 2px 5px 0;
-                  text-decoration: none;
-                  border-radius: 7px;
-                  border: 1px solid #e4e4e4;
-                  background-color: rgba(246, 246, 246, 0.5);
-                  color: #9b9b9b;
-                  font-size: 14px;
-                  font-weight: 400;
-                  transition: all 0.2s;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem span:first-child {
-                    padding-right: 7px;
-                    letter-spacing: -2px;
-                    color: #108f3e;
-                    font-size: 18px;
-                    font-weight: 500; }
-                  .informationMovie .informationMovie__content .tab-content #showTimes .row .contentST .contentST__content .showTimesInfo .movieSessions .listTime .timeItem span:last-child {
-                    color: #9b9b9b;
-                    font-size: 14px;
-                    font-weight: 500; }
-      .informationMovie .informationMovie__content .tab-content #info .inforTop {
-        width: 100%;
-        margin: 0; }
-        .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left {
-          padding: 0 7px; }
-          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left .left__item {
-            margin: 0 0 10px; }
-            .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-left .left__item p {
-              margin-bottom: 10px;
-              padding: 0;
-              color: #e9e9e9;
-              font-size: 14px;
-              font-weight: normal; }
-        .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right {
-          padding: 0 7px 0 10px; }
-          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item p {
-            margin-bottom: 10px;
-            color: #e9e9e9;
-            font-size: 14px;
-            font-weight: normal; }
-          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemTitle {
-            margin-bottom: 10px; }
-          .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemContent {
-            margin-bottom: 10px; }
-            .informationMovie .informationMovie__content .tab-content #info .inforTop .infor-right .right__item .itemContent p {
-              text-align: justify; }
-      .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomTitle {
-        margin-bottom: 10px; }
-        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomTitle p {
-          margin: 50px 0 20px;
-          padding: 0 7px;
-          color: #e9e9e9;
-          font-size: 14px;
-          font-weight: normal; }
-      .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent {
-        width: 33%;
-        padding-bottom: 20px; }
-        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a {
-          transition: all 0.2s; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg {
-            width: 100%;
-            background-color: #e8e8e8;
-            margin-bottom: 20px; }
-            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg img {
-              max-width: 737px;
-              width: 100%;
-              height: 129px;
-              object-fit: cover; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomReview p {
-            margin-bottom: 7px;
-            line-height: 26px;
-            height: 50px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #fff;
-            font-size: 16px;
-            font-weight: normal; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a:hover {
-            text-decoration: none; }
-            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a:hover .bottomTitle p {
-              color: #fb4226;
-              font-size: 16px;
-              font-weight: normal; }
-        .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon {
-          display: flex;
-          align-content: center;
-          padding-top: 10px; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like {
-            margin-right: 25px; }
-            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like img {
-              margin: 2px 10px 0 0;
-              width: 16px;
-              height: auto; }
-            .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .like span {
-              color: #fff; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .comment a img {
-            margin: 2px 10px 0 0;
-            width: 16px;
-            height: auto; }
-          .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent .bottom__icon .comment a span {
-            color: #fff; }
-      .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem {
-        border: 1px solid #e6e6e6;
-        border-radius: 3px;
-        background-color: #fff;
-        max-width: 580px;
-        margin: 15px auto 0;
-        padding: 20px 20px 12px; }
-        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer {
-          display: flex; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer {
-            display: flex;
-            text-align: left;
-            padding: 0; }
-            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer img {
-              width: 32px;
-              height: 32px;
-              border-radius: 25px; }
-            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span {
-              margin-left: 10px; }
-              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:first-child {
-                margin: 0;
-                color: #000;
-                font-size: 14px;
-                font-weight: normal; }
-                .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:first-child img {
-                  width: 18px;
-                  height: 18px; }
-              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .reviewer span p:last-child {
-                margin-bottom: 10px;
-                color: #9b9b9b;
-                font-size: 10px;
-                font-weight: normal; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews {
-            display: flex;
-            justify-content: flex-end;
-            padding: 0; }
-            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate {
-              text-align: center; }
-              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p {
-                margin: 0; }
-              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:first-child {
-                color: #91d25a;
-                font-size: 16px;
-                font-weight: normal; }
-              .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:last-child {
-                display: flex;
-                justify-content: center;
-                margin-top: 10px; }
-                .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .infoReviewer .numberOfReviews .rate p:last-child img {
-                  max-width: 8px;
-                  width: 100%;
-                  height: auto; }
-        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent {
-          padding: 20px 0; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent p {
-            margin: 0;
-            color: #4a4a4a;
-            font-size: 14px;
-            font-weight: normal; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .commentReviewer .commentContent p:last-child {
-            color: #fb4226;
-            cursor: pointer; }
-        .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes {
-          border-top: 1px solid #e6e6e6;
-          padding-top: 10px; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes img {
-            width: 16px;
-            height: auto;
-            margin-right: 10px;
-            transition: all 0.2s; }
-            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes img:hover {
-              width: 18px; }
-          .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes span {
-            color: #737576;
-            font-size: 14px;
-            font-weight: normal; }
-            .informationMovie .informationMovie__content .tab-content #evaluate .listComment .commentItem .likes span strong {
-              font-weight: 700; }
-      .informationMovie .informationMovie__content .tab-content #evaluate .btn--white {
-        margin-top: 35px;
-        margin-bottom: 20px; }
-  .informationMovie .detailWidth {
-    max-width: 870px;
-    margin: auto; }
-
-@media screen and (max-width: 736px) {
-  .informationMovie .informationMovie__content {
-    transform: translate(0, 0);
-    padding: 0; }
-    .informationMovie .informationMovie__content .nav {
-      padding-top: 20px; }
-    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent {
-      width: 100% !important;
-      padding: 0 7px; }
-      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomImg img {
-        max-width: none;
-        height: 100% !important; }
-      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomReview {
-        margin-bottom: 8px;
-        padding: 3px 0 0 12px; }
-      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .like,
-      .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .comment {
-        display: none; } }
-@media screen and (max-width: 768px) {
-  .informationMovie .informationMovie__content .nav {
-    padding-top: 20px; }
-  .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent {
-    width: 100% !important;
-    padding: 0 7px; }
-    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomImg img {
-      max-width: none; }
-    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent a .bottomReview {
-      margin-bottom: 8px;
-      padding: 3px 0 0 12px; }
-    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .like,
-    .informationMovie .informationMovie__content .tab-content .inforBottom .bottomContent .bottom__icon .comment {
-      display: none; } }
 .headerBooking {
   width: 71.3%;
   height: 80px; }
@@ -1848,150 +1994,198 @@ body {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .checkOut {
     width: 280px; } }
-.formLogin {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 750px;
-  background-image: url(../img/bgBodyLogin.jpg);
-  background-position: center;
+.login .login__background {
+  background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
-  background-size: cover; }
-  .formLogin .formLogin__content {
-    position: absolute;
-    width: 1123px;
-    margin-top: 50px;
-    margin-bottom: 70px;
-    padding-top: 135px;
-    background-image: url(../img/bgLogin.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    overflow: hidden; }
-    .formLogin .formLogin__content .signUp {
-      float: right;
-      width: 562px;
-      background: rgba(177, 135, 77, 0.75); }
-      .formLogin .formLogin__content .signUp .signUp_form {
-        padding: 60px 85px 80px 55px; }
-        .formLogin .formLogin__content .signUp .signUp_form h2 {
-          margin: 0;
-          padding: 0;
-          margin-bottom: 20px;
-          color: #fff;
-          font-size: 30px;
-          font-weight: 600; }
-        .formLogin .formLogin__content .signUp .signUp_form .form-group {
-          margin-bottom: 30px; }
-          .formLogin .formLogin__content .signUp .signUp_form .form-group input {
-            height: 30px;
-            width: 100%;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #ebebec;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600; }
-            .formLogin .formLogin__content .signUp .signUp_form .form-group input::placeholder {
-              color: #fff;
-              font-size: 16px;
-              font-weight: 400; }
-            .formLogin .formLogin__content .signUp .signUp_form .form-group input:focus {
-              outline: none; }
-          .formLogin .formLogin__content .signUp .signUp_form .form-group .btnRegister {
-            margin-left: 5px;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 400; }
-            .formLogin .formLogin__content .signUp .signUp_form .form-group .btnRegister:hover {
-              text-decoration: none; }
-        .formLogin .formLogin__content .signUp .signUp_form .btnSinUp {
-          margin-top: 40px; }
-          .formLogin .formLogin__content .signUp .signUp_form .btnSinUp .btnSubmit {
-            width: 130px;
-            padding: 10px;
-            border-radius: 25px;
-            border: none;
-            text-transform: uppercase;
-            color: #b18757;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer; }
-
-.formRegister {
+  background-size: cover;
+  background-position: top center;
   width: 100%;
-  height: auto;
-  background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%); }
-  .formRegister .formRegister__content {
-    max-width: 780px;
+  height: 722px;
+  margin: auto;
+  position: relative; }
+  .login .login__background .login__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding: 40px 32px 30px;
+    max-width: 360px;
+    vertical-align: middle;
+    background: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45); }
+    .login .login__background .login__content .login-title img {
+      width: 209px;
+      margin-bottom: 96px;
+      vertical-align: middle;
+      cursor: pointer; }
+    .login .login__background .login__content .login-title p {
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: normal; }
+    .login .login__background .login__content .login-account {
+      text-align: center; }
+      .login .login__background .login__content .login-account a {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 0 10px;
+        cursor: pointer; }
+        .login .login__background .login__content .login-account a img {
+          width: 100%; }
+          .login .login__background .login__content .login-account a img:focus {
+            outline: none; }
+    .login .login__background .login__content .close {
+      position: absolute;
+      top: -4%;
+      right: -5%;
+      width: 36px;
+      height: 36px;
+      line-height: 1.2;
+      font-size: 30px;
+      border-radius: 50%;
+      background-color: #081630;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5); }
+      .login .login__background .login__content .close a {
+        text-decoration: none;
+        color: #455570; }
+
+@media screen and (max-width: 576px) {
+  .login .login__background {
     width: 100%;
-    margin: 0 auto;
-    padding: 180px 0 100px 0; }
-    .formRegister .formRegister__content .content_form {
-      box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); }
-      .formRegister .formRegister__content .content_form .formRegister_left {
-        padding: 0; }
-        .formRegister .formRegister__content .content_form .formRegister_left img {
-          border-top-left-radius: 10px;
-          border-bottom-left-radius: 10px;
+    height: auto; }
+    .login .login__background .login__content {
+      max-width: none;
+      width: 100%;
+      height: 100%; }
+      .login .login__background .login__content .close {
+        top: 1.5%;
+        right: 2.5%;
+        padding: 3px 6px;
+        font-size: 20px; } }
+.loginMovie {
+  position: relative;
+  background-image: url("../img/bgLogin.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; }
+  .loginMovie::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1; }
+  .loginMovie .loginMovie__content {
+    width: 500px;
+    border-radius: 10px;
+    padding: 55px 55px 37px 55px;
+    background: linear-gradient(to bottom, #fa7f6c, #fb4226); }
+    .loginMovie .loginMovie__content .formLogin {
+      text-align: center; }
+      .loginMovie .loginMovie__content .formLogin .formLogin__logo {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        background-color: white;
+        border-radius: 50%; }
+        .loginMovie .loginMovie__content .formLogin .formLogin__logo i {
+          color: #000;
+          font-size: 40px; }
+      .loginMovie .loginMovie__content .formLogin h2 {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 27px 0 34px;
+        margin: 0; }
+      .loginMovie .loginMovie__content .formLogin .formLogin__username,
+      .loginMovie .loginMovie__content .formLogin .formLogin__password {
+        position: relative;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+        margin-bottom: 30px; }
+        .loginMovie .loginMovie__content .formLogin .formLogin__username i,
+        .loginMovie .loginMovie__content .formLogin .formLogin__password i {
+          position: absolute;
+          top: 12px;
+          left: 0;
+          color: #fff;
+          font-size: 16px;
+          padding-left: 5px; }
+        .loginMovie .loginMovie__content .formLogin .formLogin__username input,
+        .loginMovie .loginMovie__content .formLogin .formLogin__password input {
           width: 100%;
-          height: 100%; }
-      .formRegister .formRegister__content .content_form .formRegister_right {
-        background-color: #000;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        padding: 0; }
-        .formRegister .formRegister__content .content_form .formRegister_right .right__content {
-          padding: 57px 65px;
-          padding-bottom: 65px; }
-          .formRegister .formRegister__content .content_form .formRegister_right .right__content .title {
-            text-align: center;
+          height: 45px;
+          background: transparent;
+          border: none;
+          cursor: auto;
+          padding: 0 5px 0 30px;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.2; }
+          .loginMovie .loginMovie__content .formLogin .formLogin__username input:focus,
+          .loginMovie .loginMovie__content .formLogin .formLogin__password input:focus {
+            outline: none;
+            border: none;
+            padding-left: 5px; }
+          .loginMovie .loginMovie__content .formLogin .formLogin__username input::placeholder,
+          .loginMovie .loginMovie__content .formLogin .formLogin__password input::placeholder {
             color: #fff;
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 35px; }
-          .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group {
-            margin-bottom: 33px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group input {
-              width: 100%;
-              padding: 5px 0;
-              background: transparent;
-              border: none;
-              color: #ebebec;
-              font-size: 16px;
-              font-weight: normal; }
-              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group input:focus {
-                outline: none;
-                border: none; }
-            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control {
-              border: none;
-              background-color: transparent;
-              color: rgba(235, 235, 236, 0.5);
-              font-size: 16px;
-              font-weight: normal; }
-              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control:focus {
-                box-shadow: none; }
-              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .form-group .form-control option {
-                background-color: #ebebec;
-                color: #000;
-                font-size: 16px;
-                font-weight: normal; }
-          .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister {
-            text-align: center;
-            padding-top: 10px; }
-            .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister .btnSubmit {
-              background-color: #108f3e;
-              border-radius: 20px;
-              border: none;
-              padding: 5px 33px;
-              color: #fff;
-              font-size: 18px;
-              font-weight: 400;
-              transition: all .4s;
-              cursor: pointer; }
-              .formRegister .formRegister__content .content_form .formRegister_right .right__content .form .buttonRegister .btnSubmit:focus {
-                border: none;
-                outline: none; }
+            font-size: 16px;
+            font-weight: 400; }
+      .loginMovie .loginMovie__content .formLogin .formLogin__rememberMe {
+        text-align: left;
+        padding: 5px 0 35px 5px;
+        display: flex;
+        align-items: center; }
+        .loginMovie .loginMovie__content .formLogin .formLogin__rememberMe span {
+          padding-right: 25px;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 400;
+          cursor: pointer; }
+        .loginMovie .loginMovie__content .formLogin .formLogin__rememberMe input[type=checkbox] {
+          width: 16px;
+          height: 16px;
+          background: white;
+          margin-right: 8px; }
+          .loginMovie .loginMovie__content .formLogin .formLogin__rememberMe input[type=checkbox]:focus {
+            background-color: white;
+            outline: none; }
+      .loginMovie .loginMovie__content .formLogin .btnLogin {
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 20px;
+        min-width: 120px;
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        transition: .4s; }
+        .loginMovie .loginMovie__content .formLogin .btnLogin:hover {
+          border: 1px solid white;
+          background: linear-gradient(to right, #fa7f6c, transparent 100%); }
+        .loginMovie .loginMovie__content .formLogin .btnLogin:focus {
+          outline: none; }
+      .loginMovie .loginMovie__content .formLogin .forgotPass {
+        padding-top: 90px; }
+        .loginMovie .loginMovie__content .formLogin .forgotPass a {
+          color: #333;
+          font-size: 13px;
+          font-weight: 400;
+          transition: all .4s; }
+          .loginMovie .loginMovie__content .formLogin .forgotPass a:hover {
+            text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
