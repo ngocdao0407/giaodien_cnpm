@@ -10,7 +10,8 @@
 .border-radius, .introduceMovie .introduceMovie__content .detailMovie .imgMovie img, .informationMovie .informationMovie__content .tab-content #showTimes, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg, .informationMovie .informationMovie__content .tab-content #info .inforBottom .bottomContent a .bottomImg img, .buyTicket .buyTicket__content .item__dropdown .dropdown-menu--edit, .buyTicket .buyTicket__content .item__button .btn, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .nowShowing__content .row .col-sm-3 .film .film__image .typePoint .point, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image img, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .film__play, .showTimes .showTimes__content .tab-content .comingSoon__content .row .col-sm-3 .film .film__image .typePoint span:last-child, .news .news__content .tab-content .introduce .introduce__item a img,
 .news .news__content .tab-content .introduce .review__item a img,
 .news .news__content .tab-content .review .introduce__item a img,
-.news .news__content .tab-content .review .review__item a img, .news .news__content .tab-content .review .review__itemEnd .endItem .imgReview img, .appMobile .appMobile__content .appMobile-left .btnAppMobile, .seatCheckOut .bookingRight .bookingRight__content .bottom .listChair .listItem .chairRow .seat {
+.news .news__content .tab-content .review .review__item a img, .news .news__content .tab-content .review .review__itemEnd .endItem .imgReview img, .appMobile .appMobile__content .appMobile-left .btnAppMobile, .seatCheckOut .bookingRight .bookingRight__content .bottom .listChair .listItem .chairRow .seat, .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td .btnDel,
+.sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td .btnEdit {
   border-radius: 4px; }
 
 .clear {
@@ -2187,5 +2188,124 @@ body {
           transition: all .4s; }
           .loginMovie .loginMovie__content .formLogin .forgotPass a:hover {
             text-decoration: none; }
+
+.sideBar {
+  width: 100%; }
+  .sideBar .sideBar__header {
+    background-color: rgba(255, 255, 255, 0.95); }
+    .sideBar .sideBar__header .header-left {
+      background: #303C54;
+      padding: 5px 25px; }
+      .sideBar .sideBar__header .header-left a:hover {
+        text-decoration: none; }
+      .sideBar .sideBar__header .header-left a img {
+        width: 50px;
+        height: 50px; }
+      .sideBar .sideBar__header .header-left a span {
+        color: #afafaf;
+        font-size: 13px;
+        font-weight: 600; }
+    .sideBar .sideBar__header .header-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400; }
+  .sideBar .sideBar__content .contentNav {
+    height: auto;
+    padding: 0;
+    background: #3C4B64; }
+    .sideBar .sideBar__content .contentNav .nav {
+      display: flex;
+      flex-direction: column; }
+      .sideBar .sideBar__content .contentNav .nav .nav-item:hover {
+        background: #321FDB; }
+      .sideBar .sideBar__content .contentNav .nav .nav-item .nav-link {
+        transition: all 0.5s;
+        padding: 15px 20px;
+        color: #d8d8d8;
+        font-size: 16px;
+        font-weight: 400; }
+        .sideBar .sideBar__content .contentNav .nav .nav-item .nav-link.active {
+          background: #46546C;
+          color: #fff; }
+        .sideBar .sideBar__content .contentNav .nav .nav-item .nav-link i {
+          margin: 0 5px; }
+  .sideBar .sideBar__content .contentTab {
+    height: auto;
+    background: #e7eaec;
+    padding: 0; }
+    .sideBar .sideBar__content .contentTab .abc {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      background: #fff; }
+      .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane {
+        text-align: right; }
+        .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .btnAdd {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 400;
+          padding: 12px 12px;
+          margin-bottom: 10px;
+          background: #44c020;
+          border: none;
+          border-radius: 4px; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .btnAdd:hover {
+            text-decoration: none; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .btnAdd:focus {
+            outline: none; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .btnAdd i {
+            margin-right: 5px; }
+        .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table {
+          text-align: center; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table thead tr {
+            border: 1px solid #d8d8d8;
+            border-spacing: 0;
+            background: #d8d8d8; }
+            .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table thead tr th {
+              color: rgba(74, 74, 74, 0.8);
+              font-size: 16px;
+              font-weight: 600; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr {
+            border: 1px solid #d8d8d8; }
+            .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td {
+              padding: 12px; }
+              .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td .btnDel,
+              .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td .btnEdit {
+                background: #fb4226;
+                border: none;
+                outline: none;
+                padding: 5px 10px; }
+              .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .table tbody tr td .btnEdit {
+                background: #4a90e2; }
+        .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box {
+          background: #46546C;
+          height: 50px;
+          padding: 10px;
+          margin-bottom: 20px;
+          border-radius: 40px; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box .search-txt {
+            background: none;
+            border: none;
+            outline: none;
+            float: left;
+            line-height: 30px;
+            transition: all 0.4s;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400; }
+            .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box .search-txt::placeholder {
+              color: #949494;
+              font-size: 16px;
+              font-weight: 400; }
+          .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box .search-btn {
+            color: #fb4226;
+            line-height: 40px; }
+            .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box .search-btn:hover {
+              text-decoration: none; }
+            .sideBar .sideBar__content .contentTab .abc .tab-content .tab-pane .search-box .search-btn i {
+              font-size: 24px; }
 
 /*# sourceMappingURL=main.css.map */
